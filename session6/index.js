@@ -62,7 +62,6 @@ if (!isLogin) {
 
             // ---------- 2. HIỂN THỊ DANH SÁCH ----------
             case 2: {
-                console.clear();
                 console.log("DANH SÁCH SÁCH:");
                 for (let i = 0; i < books.length; i++) {
                     console.log(i + 1 + ". " + books[i]);
@@ -76,7 +75,7 @@ if (!isLogin) {
                 }
 
                 console.log("Chuỗi hiển thị:");
-                console.log(books.join(" | "));
+                console.log(books.join(" | ")); 
 
                 alert("Đã in danh sách ra console (F12)");
                 break;
@@ -86,11 +85,16 @@ if (!isLogin) {
             case 3: {
                 let search = prompt("Nhập tên sách cần tìm:");
 
-                if (books.includes(search)) {
-                    let pos = books.indexOf(search);
-                    alert(`Tìm thấy tại vị trí index: ${pos}`);
+                if (search === null || search.trim() === "") {
+                    alert("Tên sách không hợp lệ!");
                 } else {
-                    alert("Không tìm thấy sách!");
+                    let pos = books.indexOf(search.trim());
+
+                    if (pos !== -1) {
+                        alert("Tìm thấy tại vị trí: " + pos);
+                    } else {
+                        alert("Không tìm thấy sách!");
+                    }
                 }
                 break;
             }
@@ -110,7 +114,7 @@ if (!isLogin) {
                     alert("Không tìm thấy sách!");
                 }
                 break;
-            }
+            }   
 
             // ---------- 5. ĐẢO NGƯỢC ----------
             case 5: {
