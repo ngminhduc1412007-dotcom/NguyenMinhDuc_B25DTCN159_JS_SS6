@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bai 1</h1>
+    <script>
+        let arr = [1,2,3,33,44,212,123,1123];
+        let result = [];
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > 10 ){
+                result.push(arr[i]);
+            } 
+        }
+        if (arr.length > 0) {
+            console.log(result.join(","));
+        } else {
+                console.log("khong co so nao > 10");
+        }
+    </script>
+</body>
+</html>

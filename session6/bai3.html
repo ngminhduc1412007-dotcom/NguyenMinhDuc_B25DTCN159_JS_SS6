@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bai 3</h1>
+    <script>
+        let input = prompt("nhap so luong phan tu cua mang");
+        input = Number(input);
+        if (input < 0) {
+            console.log("so phan tu nhap khong hop le");
+        } else if (input === 0) {
+            console.log("mang khong co phan tu");
+        } else {
+            let arr = [];
+            let negative = 0;
+            for (let i = 0; i < input; i++) {
+                let value = prompt("nhap phan tu cua mang");
+                value = Number(value);
+                arr.push(value);
+                if (value < 0) {
+                    negative++;
+                }
+            }
+            console.log(negative);
+        }
+    </script>
+</body>
+</html>

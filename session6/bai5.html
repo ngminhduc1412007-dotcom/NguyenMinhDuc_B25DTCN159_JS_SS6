@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bai 5</h1>
+    <script>
+        let input = prompt("nhap so luong phan tu cua mang");
+        input = Number(input);
+        if (input <= 0) {
+            console.log("so phan tu nhap khong hop le");
+        } else {
+            let arr = [];
+            let number = [];
+            let total;
+            let hasNumber = false;
+            for (let i = 0; i < input; i++) {
+                let num = prompt("nhap phan tu cua mang");
+                arr.push(num);
+                if (num >= '0' && num <= '9') {
+                    total += Number(num);
+                    hasNumber = true;
+                }
+            }
+            if (number > 0) {
+                console.log(number.join(","));
+            } else if (hasNumber) {
+                console.log(total);
+            } else {
+                console.log("mang khong co ki tu so");
+            }
+        }
+    </script>
+</body>
+</html>

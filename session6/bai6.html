@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bai 6</h1>
+    <script>
+        let input = prompt("nhap so luong phan tu cua mang");
+        input = Number(input);
+        if (input < 0) {
+            console.log("so phan tu nhap khong hop le");
+        } else if (input === 0) {
+            console.log("mang rong");
+        } else {
+            let arr = [];
+            let result = [];
+            for (let i = 0; i < input; i++) {
+                let value = prompt("nhap phan tu cua mang");
+                if (value === "false") {
+                    value = false;
+                }else if (value === "true") {
+                    value = true;
+                }else if (value === "null") {
+                    value = null;
+                }else if (value === "undefined") {
+                    value = undefined;
+                }else if (value !== "" && !isNaN(value)) {
+                    value = Number(value);
+                }
+                arr.push(value);
+                if (value) {
+                    result.push(value);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

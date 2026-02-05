@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 7</title>
+</head>
+<body>
+    <h1>Bai 7</h1>
+    <script>
+        let input = prompt("Nhap so luong phan tu cua mang");
+        input = Number(input);
+        if (input < 0) {
+            console.log("So phan tu nhap khong hop le");
+        } else if (input === 0) {
+            console.log("Mang rong");
+        } else {
+            let arr = [];
+            for (let i = 0; i < input; i++) {
+                let num = Number(prompt("Nhap phan tu thu " + i));
+                arr.push(num);
+            }
+            if (arr.length < 2) {
+                console.log("Khong du dieu kien");
+            } else {
+                let max = arr[0];
+                let secondMax = arr[1];
+                if (secondMax > max) {
+                    let temp = max;
+                    max = secondMax;
+                    secondMax = temp;
+                }
+                for (let i = 2; i < arr.length; i++) {
+                    if (arr[i] > max) {
+                        secondMax = max;
+                        max = arr[i];
+                    } else if (arr[i] < max && arr[i] > secondMax) {
+                        secondMax = arr[i];
+                    }
+                }
+                if (max === secondMax) {
+                    console.log("Khong ton tai so lon thu 2");
+                } else {
+                    console.log("So lon thu 2 la: " + secondMax);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

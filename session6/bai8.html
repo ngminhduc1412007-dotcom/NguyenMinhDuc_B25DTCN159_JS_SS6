@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bai 8</h1>
+    <script>
+        let number = Number(prompt("nhap so phan tu cua mang"));
+        if (number < 0) {
+            console.log("so luong phan tu khong hop le");
+        } else if (number === 0) {
+            console.log("khong phai ds fibonacci");
+        } else {
+            let arr = [];
+            for (let i = 0; i < number; i++) {
+                let value = prompt("nhap phan tu cua mamg");
+                value = Number(value);
+                arr.push(value);
+            }
+            let isFibonacci = true;
+            if (arr.length >= 3) {
+                for (let i = 2; i < arr.length; i++) {
+                    if (arr[i] !== arr[i - 1] + arr[i - 2]) {
+                        isFibonacci = false;
+                        break;
+                    }
+                }
+            } else {
+                isFibonacci = false;
+            }
+            if (isFibonacci) {
+                console.log("day la dsfibonacci");
+            } else {
+                console.log("day khong phai ds fibonacci");
+            }
+        }
+    </script>
+</body>
+</html>
